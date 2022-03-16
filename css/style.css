@@ -1,8 +1,8 @@
 .countries{
         display: grid;
-        display: -ms-grid;
+        /* display: -ms-grid; */
         grid-template-columns: repeat(3,1fr);
-        -ms-grid-columns:repeat(3,1fr);
+        /* -ms-grid-columns:repeat(3,1fr); */
         gap:20px;
 }
 
