@@ -13,13 +13,44 @@ console.log(allCountriesHtml);
 const container=document.getElementById('countries')
 container.innerHTML=allCountriesHtml.join(' ')
 }
+// orginal
+// const getCountryHtml=country=>{
 
-const getCountryHtml=country=>{
+//         return `
+//         <div class="country">
+//         <h2>${country.name.common}</h2>
+//         <img src="${country.flags.svg}">
+//         </div>
+//         `
+// }
+
+// option1
+// const getCountryHtml=country=>{
+//         //option 1
+//         const {name,flags}=country
+//         console.log(name.common)
+
+//         return `
+//         <div class="country">
+//         <h2>${name.common}</h2>
+//         <img src="${flags.svg}">
+//         </div>
+//         `
+// }
+
+
+// option2
+
+const getCountryHtml=({name,flags,area,region})=>{
+        //option 1
+        // const {name,flags}=country
 
         return `
         <div class="country">
-        <h2>${country.name.common}</h2>
-        <img src="${country.flags.svg}">
+        <h2>${name.common}</h2>
+        <p>Area :${area}</p>
+        <p>contient:${region}</p>
+        <img src="${flags.svg}">
         </div>
         `
 }
